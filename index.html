@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light">
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -14,6 +15,8 @@
   </head>
   <body class="page">
     <header class="header">
+      <div class="header__decor" aria-hidden="true">&lt;/html&gt;</div>
+      <h1 class="header__title">закрываюший тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -40,7 +43,8 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="main">
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

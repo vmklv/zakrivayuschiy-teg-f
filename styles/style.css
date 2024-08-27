@@ -15,6 +15,125 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  font-family: PressStart2P, serif;
+  color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  min-block-size: 323px;
+  margin-block-start: 102px;
+  margin-block-end: 104px;
+  padding: 120px 14px 25px;
+  border: 2px solid var(--accent-color, #00CC14);
+  background: var(--theme-bg, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__decor {
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-block-end: 20px;
+}
+
+.header__title {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-block-end: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-menu__button {
+  color: var(--accent-color, #00CC14);
+  font-family: "PressStart2P";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+}
+
+.card {
+  border: 2px solid var(--accent-color, #00CC14);
+}
+
+.card__title {
+  border-block-end: 2px solid var(--accent-color, #00CC14);
+  font-family: Inter-Variable;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 785;
+  line-height: normal;
+  padding: 4px 10px 6px;
+}
+
+.card__picture {
+  margin: 0;
+  position: relative;
+}
+
+.picture-caption {
+  position: absolute;
+  top: 23px;
+  right: 11px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+}
+
+.card__description {
+  padding: 27px 25px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+  font-family: Inter-Variable;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 465;
+  line-height: 116.667%;
+}
+
+.card__like {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 25px;
+}
+
+.footer {
+  min-block-size: 236px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-save {
+  min-block-size: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

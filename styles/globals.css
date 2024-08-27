@@ -9,7 +9,9 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
 }
 
 h1,
@@ -35,6 +37,10 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 
 ul,
@@ -50,4 +56,8 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+img {
+  width: 100%;
 }

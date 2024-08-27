@@ -19,6 +19,7 @@
   color: var(--accent-color);
   display: flex;
   flex-direction: column;
+  max-width: 696px;
 }
 
 .header {

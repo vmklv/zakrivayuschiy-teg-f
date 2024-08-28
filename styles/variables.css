@@ -1,6 +1,37 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
+
+  /* main */
   --accent-color: #00CC14;
   --theme-bg: #000000;
+
+  /* like icon */
+
+  --fill-active: #FF0000;
+  --fill-border: #00cc14;
+
+
+  --bg-secondry: #000;
+  --bg-accent: #00cc14;
+  --bg-header: #000;
+  --line-global-color: #000;
+  --gradient: #007f0c;
+  --gradient-second: #004306;
+
+  --shadow: #000;
+
+  --second-ff: 'Inter-Variable';
+  --main-ff: 'PressStart2P';
+
+  --s-fz: 14px;
+  --m-fz: 18px;
+
+  --s-font-feature-settings: 'wght' 465;
+  --l-font-feature-settings: 'wght' 785;
+
+  --s-line-height: 14px;
+  --ssm-line-height: 21px;
+  --sm-line-height: 22px;
+  --m-line-height: 23px;
 }

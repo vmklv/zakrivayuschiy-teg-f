@@ -23,8 +23,8 @@
   --s-fz: 14px;
   --m-fz: 18px;
 
-  --s-font-wght: 465;
-  --l-font-wght: 785;
+  --s-font-wght: 'wght' 465;
+  --l-font-wght: 'wght' 785;
 
   --s-lh: 14px;
   --ssm-lh: 21px;

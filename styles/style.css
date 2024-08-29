@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-feature-settings: 'wght' 465;
+  font-variation-settings: 'wght' var(--s-font-wght, 465);
   background-image: repeating-linear-gradient(
       var(--line-color),
       var(--line-color) 2px,
@@ -168,7 +168,7 @@
   padding-inline: 8px;
   font-family: var(--main-ff), serif;
   font-size: 18px;
-  font-weight: var(--l-font-wght);
+  font-variation-settings: 'wght' var(--l-font-wght, 785);
   line-height: var(--sm-lh, 22px);
   color: var(--accent-color);
   border-block-end: 2px solid var(--accent-color, #00cc14);

@@ -477,8 +477,16 @@
 }
 
 @supports (font-variation-settings: normal) {
-  .page {
-    font-family: var(--main-ff), sans-serif;
+  .card__title {
+    font-family: var(--second-ff), sans-serif;
+    font-variation-settings: var(--l-font-feature-settings, 765);
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  .card__text {
+    font-family: var(--feature-font-family), sans-serif;
+    font-variation-settings: var(--s-font-feature-settings, 465);
   }
 }
 

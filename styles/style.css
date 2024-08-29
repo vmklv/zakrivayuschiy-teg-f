@@ -475,3 +475,18 @@
     transform-origin: 0 0;
   }
 }
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--main-ff), sans-serif;
+  }
+}
+
+@supports ((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000)) {
+  .label {
+    -webkit-text-stroke-color: var(--tx-shadow, #000);
+    -webkit-text-stroke-width: 1px;
+    text-stroke: 1px var(--txshadow, #000);
+    text-shadow: none;
+  }
+}

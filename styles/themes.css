@@ -8,6 +8,7 @@
   /* main */
   --accent-color: #00cc14;
   --theme-bg: #000000;
+  --shadow: #000;
 
   --fill-active: #FF0000;
   --fill-border: #00cc14;
@@ -25,6 +26,7 @@
 :root.theme-light {
   --accent-color: #000;
   --theme-bg: #fff;
+  --shadow: #fff;
 
   --fill-active: #FF0000;
   --fill-border: #000;
@@ -43,6 +45,7 @@
   :root {
     --accent-color: #000;
     --theme-bg: #fff;
+    --shadow: #fff;
 
     --fill-active: #FF0000;
     --fill-border: #000;

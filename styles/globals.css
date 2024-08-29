@@ -38,8 +38,6 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
-  margin: 0;
-  padding: 0;
   background-color: transparent;
   border: none;
 }
@@ -47,6 +45,10 @@ input {
 ul,
 ol {
   list-style: none;
+}
+
+img {
+  width: 100%;
 }
 
 .visually-hidden {

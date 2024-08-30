@@ -27,13 +27,13 @@
 
 @keyframes sparks {
   0% {
-    fill: transparent;
+    opacity: 0;
   }
   50% {
-    fill: var(--fill-active);
+    opacity: 1;
   }
   100% {
-    fill: transparent;
+    opacity: 0;
   }
 }
 

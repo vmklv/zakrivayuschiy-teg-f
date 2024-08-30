@@ -37,8 +37,8 @@
   --gradient-second: #1a1a1a;
   --line-color: #d3d3d3;
 
-  --s-font-wght: 400;
-  --l-font-wght: 700;
+  --s-font-wght: 465;
+  --l-font-wght: 785;
 }
 
 @media (prefers-color-scheme: light) {

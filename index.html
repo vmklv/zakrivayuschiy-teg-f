@@ -18,7 +18,7 @@
 
   <body class="page">
     <header class="header">
-      <div class="header__decor" aria-hidden="true">&lt;/html&gt;</div>
+      <a href="#" class="header__decor" aria-hidden="true">&lt;/html&gt;</a>
       <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -91,6 +91,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -167,6 +168,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -243,6 +245,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -319,6 +322,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -395,6 +399,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -471,6 +476,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -547,6 +553,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -623,6 +630,7 @@
           >
             <svg
               class="like-icon"
+              aria-hidden="true"
               width="38"
               height="36"
               viewBox="0 0 38 36"
@@ -667,34 +675,32 @@
         </div>
       </article>
 
-
-    </main>
-
-    <footer class="footer">
-      <button class="save-button button" type="button" onclick="window['dialog-id'].showModal()">
-        <svg class="save-button--floppy" viewBox="0 0 21 21">
-          <use href="./svg/floppy.svg#floppy"/> 
-        </svg>
-        <span class="button__text">
-          Сохранить на память
-        </span>
-      </button>
-    <dialog class="dialog" id="dialog-id">
-      <svg class="dialog-floppy" viewBox="0 0 21 21">
-        <use href="./svg/floppy.svg#floppy"/>
-      </svg>
-      <span class="dialog__content-text">
-        Вставьте дискету, чтобы продолжить
-      </span>
-      <form class="dialog__form" method="dialog" >
-        <button class="dialog__button button" type="submit">
+      <div class="save">
+        <button class="save-button button" type="button" onclick="window['dialog-id'].showModal()">
+          <svg class="save-button--floppy" viewBox="0 0 21 21">
+            <use href="./svg/floppy.svg#floppy"/>
+          </svg>
           <span class="button__text">
-            Ок
+            Сохранить на&nbsp;память
           </span>
         </button>
-      </form>
-    </dialog>
-    </footer>
+      <dialog class="dialog" id="dialog-id">
+        <svg class="dialog-floppy" viewBox="0 0 21 21">
+          <use href="./svg/floppy.svg#floppy"/>
+        </svg>
+        <span class="dialog__content-text">
+          Вставьте дискету, чтобы продолжить
+        </span>
+        <form class="dialog__form" method="dialog" >
+          <button class="dialog__button button" type="submit">
+            <span class="button__text">
+              Ок
+            </span>
+          </button>
+        </form>
+      </dialog>
+      </div>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

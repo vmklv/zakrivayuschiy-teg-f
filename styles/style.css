@@ -52,6 +52,19 @@
   font-size: var(--s-fz);
   line-height: var(--s-lh);
 
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color, #000);
+    transition: transform 0.5s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+  }
+
   &:focus {
     outline: none;
   }
@@ -65,7 +78,7 @@
   font-family: var(--second-ff), monospace;
   line-height: var(--s-lh);
   font-weight: 400;
-  color: var(--accent-color);
+  color: var(--button-text);
   z-index: 1  ;
   mix-blend-mode: difference;
 }
@@ -118,6 +131,13 @@
 }
 
 .theme-menu__button {
+  cursor: pointer;
+  background: none;
+  appearance: none;
+  outline: none;
+  position: relative;
+  font-size: var(--s-fz);
+  line-height: var(--s-lh);
   margin-inline-start: 20px;
   text-transform: uppercase;
 
@@ -171,7 +191,7 @@
   padding-inline: 11px;
   font-family: var(--main-ff), serif;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--l-font-wght);
+  font-variation-settings: var(--l-font-wght, 785);
   line-height: var(--sm-lh, 22px);
   color: var(--accent-color);
   border-block-end: 2px solid var(--accent-color, #00cc14);
@@ -212,8 +232,8 @@
 
 .picture-caption {
   position: absolute;
-  top: 23px;
-  right: 13px;
+  top: 25px;
+  right: 25px;
   color: var(--accent-color);
   font-family: var(--second-ff), sans-serif;
   font-weight: 400;
@@ -232,9 +252,9 @@
   padding: 25px 23px 12.5px;
   color: var(--accent-color);
   font-size: var(--m-fz);
-  font-weight: 500;
   line-height: var(--ssm-lh, 21px);
   border-block-start: 2px solid var(--accent-color);
+  font-variation-settings: var(--s-font-wght, 465);
 }
 
 
@@ -318,19 +338,6 @@
 .card__like-button {
   background-color: var(--theme-bg, #000);
   border: 2px solid var(--accent-color, #00cc14);
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color, #000);
-    transition: transform 0.5s ease-in-out;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    inset-inline-start: 0;
-    inset-block-start: 0;
-  }
 }
 
 .button__text--padded {
@@ -345,7 +352,6 @@
 .save {
   display: flex;
   justify-content: center;
-  padding-block: 50px 103px;
 }
 
 .save-button {
@@ -362,6 +368,9 @@
 .save-button--floppy {
   width: 21px;
   height: auto;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
 }
 
 .dialog[open] {
@@ -385,6 +394,7 @@
 
 .dialog-floppy {
   width: 39px;
+  mix-blend-mode: difference;
 }
 
 .dialog__form {
@@ -399,6 +409,11 @@
 }
 
 @media (max-width: 425px) {
+  .picture-caption {
+    top: 23px;
+  right: 13px;
+  }
+
   .card__description {
     padding: 25px 27px 12.5px;
   }

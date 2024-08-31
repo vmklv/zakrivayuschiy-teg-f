@@ -70,7 +70,7 @@
   }
 
   &:focus-visible {
-    box-shadow: 2px 2px var(--accent-button);
+    box-shadow: 2px 2px var(--accent-color);
   }
 }
 
@@ -79,7 +79,8 @@
   line-height: var(--s-lh);
   font-weight: 400;
   color: var(--button-text);
-  z-index: 1  ;
+  position: relative;
+  z-index: 1;
   mix-blend-mode: difference;
 }
 
@@ -108,6 +109,10 @@
   text-transform: uppercase;
   font-weight: var(--s-font-wght);
   text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .header__title {
@@ -144,17 +149,28 @@
   &:focus-visible {
     box-shadow: none;
   }
+}
 
-  &:focus-visible::after {
-    content: "";
-    position: absolute;
-    right: 4px;
-    bottom: -3px;
-    left: 4px;
-    transform-origin: 0 0;
-    border-block-end: 1px solid var(--theme-bg);
-    animation: scaleX 0.3s ease-in;
-  }
+.theme-menu__button:enabled::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -16px;
+  width: 90%;
+  height: 2px;
+  margin-inline-start: 20px;
+  background-color: var(--accent-color);
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+.theme-menu__button:enabled:focus-visible {
+  opacity: 60%;
+}
+
+.theme-menu__button:enabled:focus-visible::after {
+  transform: scaleX(0.99);
 }
 
 .theme-menu__button:disabled {
@@ -266,72 +282,59 @@
   align-items: center;
   padding-block: 12.5px 12px;
   padding-inline-end: 25px;
+  gap: 7px;
 }
 
 .card__icon-button {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0;
 
   &:focus-visible {
-    box-shadow: none;
-  }
-
-  &:focus-visible:before {
-    content: "";
-    position: absolute;
-    inset: 1px 6px;
-    transition: outline 0.3s linear;
-    outline: 2px solid var(--theme-bg, #00cc14);
+    outline: 2px solid var(--accent-color, #00cc14);
   }
 }
 
 .like-icon {
   & .contour {
     fill: var(--accent-color, #00cc14);
-    transition: fill 0.1s;
+    transition: fill 0.1s linear;
   }
 
   & .main-body {
     fill: transparent;
-    transition: fill 0.3s;
+    transition: fill 0.3s linear;
   }
 
   & .core {
     fill: transparent;
-    transition: fill 0.3s 0.03s;
+    transition: fill 0.3s 0.03s linear;
   }
 
   & .sparks {
-    opacity: 0;;
+    opacity: 0;
   }
 }
 
-.heart:active {
-  & .main-body {
-    fill: var(--fill-active);
-  }
 
-  & .core {
-    fill: var(--fill-active);
-  }
-
-  & .contour {
-    fill: var(--fill-border);
-  }
-}
 
 .like-icon.is-liked {
   & .core {
     fill: var(--fill-heart);
+    transition: 0.3s fill linear;
   }
 
   & .main-body {
-    transition: fill 0.3s 0.05s;
+    transition: 0.3s fill linear 0.05s;
     fill: var(--fill-heart);
   }
 
   & .contour {
     fill: var(--fill-heart);
-    transition: fill 0.3s 0.06s;
+    transition: 0.3s fill linear 0.06s;
   }
 }
 
@@ -412,7 +415,7 @@
 @media (max-width: 425px) {
   .picture-caption {
     top: 23px;
-  right: 13px;
+    right: 13px;
   }
 
   .card__description {
@@ -453,25 +456,30 @@
 }
 
 @media (hover: hover) {
+  .button:hover {
+    cursor: pointer;
+  }
+
+  .theme-menu__button:hover {
+    opacity: 60%;
+  }
+
   .heart:hover {
     cursor: pointer;
 
     & .main-body {
-      transition: fill 0.3s 0.05s;
+      transition: fill 0.3s linear 0.05s;
       fill: var(--accent-color);
     }
 
     & .core {
-      transition: fill 0.3s;
+      transition: fill 0.3s linear;
       fill: var(--accent-color);
     }
-
   }
-}
 
-@media (hover: hover) {
-  .button:hover {
-    cursor: pointer;
+  .button:hover:after {
+    transform: scaleX(1);
   }
 }
 
@@ -483,12 +491,6 @@
     & .sparks {
       animation: sparks 0.3s ease-in alternate .3s;
     }
-  }
-}
-
-@media (hover: hover) {
-  .button:hover:after {
-    transform: scaleX(1);
   }
 }
 
@@ -515,3 +517,19 @@
   }
 }
 
+.heart:active {
+  & .main-body {
+    fill: var(--fill-active);
+    transition: .3s fill linear 0.05s;
+  }
+
+  & .core {
+    fill: var(--fill-active);
+    transition: .3s fill linear;
+  }
+
+  & .contour {
+    fill: var(--fill-border);
+    transition: .1s fill linear;
+  }
+}
